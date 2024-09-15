@@ -9,8 +9,10 @@ const nextConfig = {
         pathname: "/blog_upload/**",
       },
       {
-        protocol: "https",
-        hostname: "miro.medium.com",
+        protocol: "http",
+        hostname: "139.162.17.88",
+        port: "8081",
+        pathname: "/blog_upload/**",
       },
     ],
   },

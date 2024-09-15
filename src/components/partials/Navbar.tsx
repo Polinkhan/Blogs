@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <nav className="px-20 py-2 flex justify-between ">
+    <nav className="px-20 h-[60px] flex justify-between items-center border-b border-gray-100">
       <div className="flex space-x-5 items-center">
         <Link href={"/"}>
           <h4 className="text-2xl font-bold">Blogs</h4>

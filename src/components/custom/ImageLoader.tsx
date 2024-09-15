@@ -1,4 +1,3 @@
-import { BASE_URL } from "@/common/config";
 import Image from "next/image";
 
 interface ImageLoaderProps {
