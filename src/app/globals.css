@@ -10,7 +10,7 @@
 }
 
 * {
-  transition: 0.25s all ease;
+  /* transition: 0.25s all ease; */
 }
 
 @layer utilities {

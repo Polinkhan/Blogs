@@ -2,8 +2,14 @@ import { cn } from "@/lib/utils";
 import { DivProps } from "@/types/types.elements";
 import React from "react";
 
-export const Dot = ({ className, ...rest }: DivProps) => {
-  return <div className={cn("h-3.5 w-3.5 bg-gray-500 rounded-full", className)} {...rest} />;
+interface DotProps extends DivProps {
+  asSeparator?: boolean;
+}
+
+export const Dot = ({ className, asSeparator, ...rest }: DotProps) => {
+  let classes = "h-3.5 w-3.5 bg-gray-500";
+  if (asSeparator) classes = "h-1 w-1 bg-gray-300";
+  return <div className={cn("rounded-full", classes, className)} {...rest} />;
 };
 
 export const ThreeDots = () => {

@@ -5,10 +5,11 @@ import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import React from "react";
 import CodeView from "./components/CodeView";
+import ProfileView from "@/components/partials/ProfileView";
 
-const BlogsView = () => {
+const BlogView = () => {
   return (
-    <div className="max-w-[850px] mx-auto">
+    <div className="">
       <CardHeader>
         <CardTitle className="text-3xl font-bold">
           Creating a Custom useFetch Hook with axios in React for API Requests
@@ -16,15 +17,7 @@ const BlogsView = () => {
         <CardDescription>Custom hook for easier API request with axios</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex items-center space-x-2">
-          <Avatar className="size-12">
-            <AvatarFallback>P</AvatarFallback>
-          </Avatar>
-          <div>
-            <p className="text-sm font-medium">Abu Sayed Polin</p>
-            <p className="text-xs text-muted-foreground">abusayedpolin@gmail.com</p>
-          </div>
-        </div>
+        <ProfileView />
       </CardContent>
       <CardFooter>
         <div className="flex space-x-5">
@@ -91,4 +84,4 @@ const BlogsView = () => {
   );
 };
 
-export default BlogsView;
+export default BlogView;

@@ -3,7 +3,7 @@ import { TabListType } from "@/types/types.component";
 import React from "react";
 import BlogCard from "./components/BlogCard";
 
-const Home = () => {
+const HomeView = () => {
   // --------------------------------------------
   // Data
   // --------------------------------------------
@@ -23,11 +23,7 @@ const Home = () => {
     },
   ];
 
-  return (
-    <div className="max-w-[800px] mx-auto">
-      <CustomTabs tabList={tabList} />
-    </div>
-  );
+  return <CustomTabs tabList={tabList} />;
 };
 
-export default Home;
+export default HomeView;

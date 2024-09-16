@@ -1,15 +1,21 @@
-import { ThreeDots } from "@/components/partials/Dot";
 import React from "react";
+import { ThreeDots } from "@/components/partials/Dot";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import * as styles from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const CodeView = () => {
   return (
-    <div className="flex flex-col max-h-[700px] bg-[#2f2f2f] rounded-lg overflow-hidden">
+    <div className="flex flex-col max-h-[700px] bg-[#2b2b2b] rounded-lg overflow-hidden">
       <div className="p-3 px-4 flex items-center justify-between bg-stone-900">
         <ThreeDots />
         <p className="text-slate-200 text-xs font-medium">Copy</p>
       </div>
-      <div className="px-6 py-4 overflow-auto">
-        <pre className="text-slate-100 text-sm">
+      <div className="p-6 overflow-auto text-sm flex">
+        <SyntaxHighlighter
+          language="javascript"
+          style={styles.darcula}
+          customStyle={{ height: "100%", padding: 0, margin: 0, overflow: "unset" }}
+        >
           {`import { API } from "../common/client";
 import { useState, useEffect } from "react";
 
@@ -96,8 +102,8 @@ const useFetch = ({ api, dependency = [] }: UseFetchProps) => {
 };
 
 export default useFetch;
-        `}
-        </pre>
+`}
+        </SyntaxHighlighter>
       </div>
     </div>
   );

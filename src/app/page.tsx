@@ -1,11 +1,6 @@
-import BodyLayout from "@/components/layout/BodyLayout";
-import HomeView from "@/pages/HomeView";
+import { redirect } from "next/navigation";
 const RootPage = () => {
-  return (
-    <BodyLayout>
-      <HomeView />
-    </BodyLayout>
-  );
+  redirect("/blogs");
 };
 
 export default RootPage;
