@@ -8,7 +8,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <>
       <Navbar />
-      <main className="min-h-[calc(100vh-60px)]">
+      <main className="min-h-[calc(100vh-60px)] flex flex-col">
         <BodyLayout>{children}</BodyLayout>
       </main>
       <Footer />

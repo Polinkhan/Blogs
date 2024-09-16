@@ -1,6 +1,5 @@
 import ProfileView from "@/components/partials/ProfileView";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
@@ -32,12 +31,7 @@ const BlogCard = () => {
 
       <div className={`w-[${imageSize}px] my-auto`}>
         <AspectRatio ratio={16 / 11}>
-          <Image
-            fill
-            alt="Image"
-            className="rounded-md object-cover"
-            src="http://139.162.17.88:8081/blog_upload/user_2687169411_1725831650615.jpg"
-          />
+          <Image fill alt="Image" className="rounded-md object-cover" src="/upload/react.webp" />
         </AspectRatio>
       </div>
     </Card>

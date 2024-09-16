@@ -2,9 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
-import React from "react";
-import { login } from "@/lib/lib";
-import { redirect } from "next/navigation";
+import React, { Suspense } from "react";
+// import { login } from "@/lib/lib";
 import ProvidersButton from "./components/ProvidersBtn";
 import Link from "next/link";
 import { GoArrowLeft } from "react-icons/go";
@@ -25,19 +24,12 @@ const LoginView = () => {
           <CardDescription>Enter your credentials</CardDescription>
         </CardHeader>
         <CardContent className="space-y-5">
-          <form
-            className="space-y-4"
-            action={async (formData) => {
-              "use server";
-              await login(formData);
-              redirect("/blogs");
-            }}
-          >
+          <form className="space-y-4">
             <div className="space-y-2">
               <Input name="email" placeholder="Email" />
               <Input name="password" placeholder="Password" />
             </div>
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="w-full" disabled>
               Continue
             </Button>
           </form>
@@ -49,11 +41,13 @@ const LoginView = () => {
           </div>
 
           <div className="flex flex-col space-y-3">
-            <ProvidersButton />
+            <Suspense fallback={"..."}>
+              <ProvidersButton />
+            </Suspense>
           </div>
 
           <p className="text-xs font-medium text-muted-foreground">
-            Don't have an account?
+            Don&apos;t have an account?
             <Link href={"register"} className="text-blue-600 hover:underline">
               {" "}
               register now

@@ -2,7 +2,6 @@ import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "../ui/hover-card";
 import { CalendarIcon } from "@radix-ui/react-icons";
-import { Dot } from "./Dot";
 
 const ProfileView = () => {
   return (

@@ -2,6 +2,7 @@ import CustomTabs from "@/components/custom/CustomTabs";
 import { TabListType } from "@/types/types.component";
 import React from "react";
 import BlogCard from "./components/BlogCard";
+import {} from "next-auth";
 
 const HomeView = () => {
   // --------------------------------------------
@@ -23,7 +24,11 @@ const HomeView = () => {
     },
   ];
 
-  return <CustomTabs tabList={tabList} />;
+  return (
+    <>
+      <CustomTabs tabList={tabList} />
+    </>
+  );
 };
 
 export default HomeView;

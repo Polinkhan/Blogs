@@ -1,7 +1,7 @@
 import React from "react";
 import { ThreeDots } from "@/components/partials/Dot";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import * as styles from "react-syntax-highlighter/dist/esm/styles/prism";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { darcula } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 const CodeView = () => {
   return (
@@ -13,7 +13,7 @@ const CodeView = () => {
       <div className="p-6 overflow-auto text-sm flex">
         <SyntaxHighlighter
           language="javascript"
-          style={styles.darcula}
+          style={darcula}
           customStyle={{ height: "100%", padding: 0, margin: 0, overflow: "unset" }}
         >
           {`import { API } from "../common/client";

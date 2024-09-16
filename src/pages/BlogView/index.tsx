@@ -1,5 +1,4 @@
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
@@ -31,12 +30,7 @@ const BlogView = () => {
 
       <CardHeader>
         <AspectRatio ratio={16 / 9}>
-          <Image
-            alt="Image"
-            layout="fill"
-            className="rounded-md object-cover"
-            src="http://139.162.17.88:8081/blog_upload/user_2687169411_1725831650615.jpg"
-          />
+          <Image alt="Image" layout="fill" className="rounded-md object-cover" src="/upload/react.webp" />
         </AspectRatio>
       </CardHeader>
 

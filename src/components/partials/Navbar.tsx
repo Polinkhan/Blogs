@@ -1,12 +1,12 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Link from "next/link";
-import { Button } from "../ui/button";
-import { getServerSession } from "next-auth/next";
 import NavProfile from "./NavProfile";
 import NavSignIn from "./NavSignIn";
+import { getNextServerSession } from "@/lib/lib";
 
 export const Navbar = async () => {
-  const data = await getServerSession();
+  const data = await getNextServerSession();
+
   const isAuthenticate = !!data;
 
   return (
@@ -17,7 +17,7 @@ export const Navbar = async () => {
   );
 };
 
-const NavbarLayout = ({ children }: any) => {
+const NavbarLayout = ({ children }: { children: ReactNode }) => {
   return (
     <nav className="px-20 h-[60px] flex justify-between items-center border-b border-gray-100">
       <div className="flex space-x-5 items-center">
